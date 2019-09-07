@@ -1,0 +1,11 @@
+
+name: ows-conflict-manager
+description: ows-conflict-manager for testing endpoints
+
+variables:
+  conflict_manager_host: https://qa-ows-conflict-manager.theorchard.io
+  conflict_manager_conflicts_new: "/conflict-manager/conflicts/new?page_limit=10"
+  conflict_manager_conflicts_resolved: "/conflict-manager/conflicts/resolved?page_limit=10"
+  conflict_manager_conflicts_actioned: "/conflict-manager/conflicts/actioned?page_limit=10"
+  conflict_manager_action: "/conflict-manager/action"
+  conflict_manager_hello: "/conflict-manager/hello"

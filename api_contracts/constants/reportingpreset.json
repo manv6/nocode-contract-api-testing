@@ -1,0 +1,90 @@
+{
+    "name": "test",
+    "report_id": "workstation-physical-product-view-US",
+    "params": {
+      "fieldParams": {
+        "Product Name": true,
+        "Artist": true,
+        "Label Name": true,
+        "Genre": true,
+        "Sub Genre": true,
+        "Product Code": true,
+        "UPC/EAN": true,
+        "Release Date": true,
+        "Product Type": true,
+        "Format": true,
+        "Units Per Set": true,
+        "Display Configuration": true,
+        "Exclusive": true,
+        "Exclusive For": true,
+        "Orchard Price": true,
+        "Wholesale Price": true,
+        "On Hand": true,
+        "Available": true,
+        "Purchase Orders": true,
+        "Potential": true,
+        "Returns In Process": true,
+        "On Hold": true,
+        "Open Scrap": true,
+        "Product Status": true,
+        "Returnability": true,
+        "Returns Disposition": true,
+        "12M Overstock": true,
+        "24M Overstock": true,
+        "Open Orders": true,
+        "Backorders": true,
+        "Day1S#": true,
+        "Day1R#": true,
+        "Day1S$": true,
+        "Day1R$": true,
+        "5DayS#": true,
+        "5DayR#": true,
+        "5DayS$": true,
+        "5DayR$": true,
+        "MTDS#": true,
+        "MTDR#": true,
+        "MTDS$": true,
+        "MTDR$": true,
+        "12MS#": true,
+        "12MR#": true,
+        "12MS$": true,
+        "12MR$": true,
+        "24MS#": true,
+        "24MR#": true,
+        "24MS$": true,
+        "24MR$": true,
+        "CYTDS#": true,
+        "CYTDR#": true,
+        "CYTDS$": true,
+        "CYTDR$": true,
+        "RTDS#": true,
+        "RTDR#": true,
+        "RTDS$": true,
+        "RTDR$": true
+      },
+      "reportParams": {
+        "paramLimit": 1000,
+        "paramSubLabel": [
+          
+        ],
+        "paramArtist": [
+          
+        ],
+        "paramProductType": [
+          
+        ],
+        "paramProduct": [
+          
+        ],
+        "paramReleaseDate": "",
+        "paramTerritory": "US",
+        "paramProductStatus": "",
+        "paramIsGenericProduct": 0,
+        "paramIsCoop": false
+      },
+      "fixedColumns": [
+        "Product Name",
+        "Artist"
+      ]
+    }
+  }

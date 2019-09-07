@@ -1,0 +1,7 @@
+
+name: ows-blacklist-manager
+description: ows-blacklist-manager for testing endpoints
+
+variables:
+  blacklist_manager_host: https://qa-ows-blacklist-manager.theorchard.io
+  blacklist_manager_hello: "/blacklist-manager/hello"

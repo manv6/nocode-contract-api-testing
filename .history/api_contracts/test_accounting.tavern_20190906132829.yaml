@@ -1,0 +1,1558 @@
+#Positive scenarios
+---
+
+
+test_name: features_features should return 200 GET 
+marks:
+  - usefixtures:
+      - workstation_accounting_session_token
+stages:
+  - name: features_features should return 200 GET
+    request:
+      url: "{grass_host}{features_features}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: assets_image_vendor_asset should return 200 GET
+stages:
+  - name: assets_image_vendor_asset should return 200 GET
+    request:
+      url: "{grass_host}{assets_image_vendor}{accounting_vendor}{accounting_asset}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: assets_image_product_cover_location should return 200 GET
+stages:
+  - name: assets_image_product_cover_location should return 200 GET
+    request:
+      url: "{grass_host}{assets_image_product_cover}{accounting_cover}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: assets_asset_product should return 403 GET
+stages:
+  - name: assets_asset_product should return 403 GET
+    request:
+      url: "{grass_host}{assets_asset_product}{accounting_asset_product}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: assets_v2_asset_status should return 403 GET
+stages:
+  - name: assets_v2_asset_status should return 403 GET
+    request:
+      url: "{grass_host}{assets_v2_asset_status}{accounting_asset_img}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: confict_manager_conflicts_new should return 200 GET
+stages:
+  - name: confict_manager_conflicts_new should return 200 GET
+    request:
+      url: "{grass_host}{conflict_manager_conflicts_new}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: confict_manager_conflicts_resolved should return 403 GET
+stages:
+  - name: confict_manager_conflicts_resolved should return 403 GET
+    request:
+      url: "{grass_host}{conflict_manager_conflicts_resolved}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: confict_manager_conflicts_actioned should return 403 GET
+stages:
+  - name: confict_manager_conflicts_actioned should return 403 GET
+    request:
+      url: "{grass_host}{conflict_manager_conflicts_actioned}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: search_catalog_suggest should return 200 GET
+stages:
+  - name: search_catalog_suggest should return 200 GET
+    request:
+      url: "{grass_host}{search_catalog_suggest}{accounting_search_catalog_suggest}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: search_suggest should return 200 GET
+stages:
+  - name: search_suggest should return 200 GET
+    request:
+      url: "{grass_host}{search_suggest}{accounting_search_suggest}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: graphql_product_graphql should return 200 POST
+stages:
+  - name: graphql_product_graphql should return 200 POST
+    request:
+      url: "{grass_host}{graphql_product_graphql}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: POST
+      json: !include constants/graphql.json
+    response:
+      status_code: 200
+---
+
+test_name: account_subaccount should return 403 GET
+stages:
+  - name: account_subaccount should return 403 GET
+    request:
+      url: "{grass_host}{account_subaccount}{accounting_vendor}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: account_identity should return 200 GET
+stages:
+  - name: account_identity should return 200 GET
+    request:
+      url: "{grass_host}{account_identity}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: account_distributor should return 204 HEAD
+stages:
+  - name: account_distributor should return 204 HEAD
+    request:
+      url: "{grass_host}{account_distributor}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: HEAD
+    response:
+      status_code: 204
+---
+
+test_name: territories_territory should return 200 GET
+stages:
+  - name: territories_territory should return 200 GET
+    request:
+      url: "{grass_host}{territories_territory}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: pricing_vendor_3 should return 200 GET
+stages:
+  - name: pricing_vendor_3 should return 200 GET
+    request:
+      url: "{grass_host}{pricing_vendor}{accounting_vendor}{accounting_pricing_vendor_3}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: pricing_vendor_2 should return 200 GET
+stages:
+  - name: pricing_vendor_2 should return 200 GET
+    request:
+      url: "{grass_host}{pricing_vendor}{accounting_vendor}{accounting_pricing_vendor_2}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: pricing_pricing_family_2 should return 200 GET
+stages:
+  - name: pricing_pricing_family_2 should return 200 GET
+    request:
+      url: "{grass_host}{pricing_pricing_family}{accounting_orchard_pricing_tier_2}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: pricing_pricing_family_3 should return 200 GET
+stages:
+  - name: pricing_pricing_family_3 should return 200 GET
+    request:
+      url: "{grass_host}{pricing_pricing_family}{accounting_orchard_pricing_tier_3}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: pricing_product_digital_bff should return 403 GET
+stages:
+  - name: pricing_product_digital_bff should return 403 GET
+    request:
+      url: "{grass_host}{pricing_product}{accounting_pricing_product_digital_bff}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: pricing_pricing_family_store_pricing_scheme_4 should return 403 GET
+stages:
+  - name: pricing_pricing_family_store_pricing_scheme_4 should return 403 GET
+    request:
+      url: "{grass_host}{pricing_pricing_family}{accounting_store_pricing_scheme_4}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: pricing_product_orchard_pricing_tier_4 should return 403 GET
+stages:
+  - name: pricing_product_orchard_pricing_tier_4 should return 403 GET
+    request:
+      url: "{grass_host}{pricing_product}{accounting_product_orchard_pricing_tier_4}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: pricing_product_effective_price_codes should return 403 GET
+stages:
+  - name: pricing_product_effective_price_codesshould return 403 GET
+    request:
+      url: "{grass_host}{pricing_product}{accounting_effective_price_codes}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: pricing_legacy_product_jit_status should return 403 GET
+stages:
+  - name: pricing_legacy_product_jit_status return 403 GET
+    request:
+      url: "{grass_host}{pricing_legacy_product}{accounting_pricing_jit_status}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: contracts_mechadmin_for_account should return 403 GET
+stages:
+  - name: contracts_mechadmin_for_account return 403 GET
+    request:
+      url: "{grass_host}{contracts_mechadmin_for_account}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: contracts_mechadmin should return 403 HEAD
+stages:
+  - name: contracts_mechadmin return 403 HEAD
+    request:
+      url: "{grass_host}{contracts_mechadmin}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: HEAD
+    response:
+      status_code: 403
+---
+
+test_name: artist_subaccount_artists should return 403 GET
+stages:
+  - name: artist_subaccount_artists return 403 GET
+    request:
+      url: "{grass_host}{artist_subaccount_artists}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+        Content-Type: "application/json"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: artist_artists should return 403 GET
+stages:
+  - name: artist_artists return 403 GET
+    request:
+      url: "{grass_host}{artist_artists}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+        Content-Type: "application/json"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: artist_artist should return 403 GET
+stages:
+  - name: artist_artist return 403 GET
+    request:
+      url: "{grass_host}{artist_artist}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: artist_searchartistautocomplete should return 403 GET
+stages:
+  - name: artist_searchartistautocomplete return 403 GET
+    request:
+      url: "{grass_host}{artist_searchartistautocomplete}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: notifications_subscribe should return 200 POST
+stages:
+  - name: notifications_subscribe should return 200 POST
+    request:
+      url: "{grass_host}{notifications_subscribe}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: POST
+      json: 
+        user_feed_name: user_email_notifications
+        feed_name: label_analytics_digest
+        feed_id: vendor_{accounting_vendor}
+    response:
+      status_code: 200
+---
+
+test_name: notifications_unsubscribe should return 200 POST
+stages:
+  - name: notifications_unsubscribe should return 200 POST
+    request:
+      url: "{grass_host}{notifications_unsubscribe}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: POST
+      json: 
+        user_feed_name: user_email_notifications
+        feed_name: label_analytics_digest
+        feed_id: vendor_{accounting_vendor}
+    response:
+      status_code: 200
+---
+
+test_name: sales_goals_countries should return 403 GET
+stages:
+  - name: sales_goals_countries should return 403 GET
+    request:
+      url: "{grass_host}{sales_goals_countries}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: sales_goals_int should return 403 GET
+stages:
+  - name: sales_goals_int should return 403 GET
+    request:
+      url: "{grass_host}{sales_goals_int}{accounting_salesgoals_goals}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: sales_goals_marketing_highlights should return 403 GET
+stages:
+  - name: sales_goals_marketing_highlights should return 403 GET
+    request:
+      url: "{grass_host}{sales_goals_marketing_highlights}{accounting_salesgoals_marketing_highlights}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: sales_goals_territories should return 403 GET
+stages:
+  - name: sales_goals_territories should return 403 GET
+    request:
+      url: "{grass_host}{sales_goals_territories}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: promo_player_product should return 403 GET
+stages:
+  - name: promo_player_product should return 403 GET
+    request:
+      url: "{grass_host}{promo_player_product}{accounting_promo_player_product}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_physical_product_tracks should return 403 GET
+stages:
+  - name: product_physical_product_tracks should return 403 GET
+    request:
+      url: "{grass_host}{product_physical_product}{accounting_product_physical_product_tracks}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_physical_product_product_inventory should return 403 GET
+stages:
+  - name: product_physical_product_product_inventory should return 403 GET
+    request:
+      url: "{grass_host}{product_physical_product}{accounting_product_physical_product_inventory}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_physical_product_tracks_publishing_obligation should return 403 GET
+stages:
+  - name: product_physical_product_tracks_publishing_obligation should return 403 GET
+    request:
+      url: "{grass_host}{product_physical_product}{accounting_product_physical_product_tracks_publishing_obligation}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_physical_product should return 403 GET
+stages:
+  - name: product_physical_product should return 403 GET
+    request:
+      url: "{grass_host}{product_physical_product}{accounting_product_physical_product}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_physical_packaging should return 403 GET
+stages:
+  - name: product_physical_packaging should return 403 GET
+    request:
+      url: "{grass_host}{product_physical_packaging}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_configuration_public_distribution_formats should return 200 GET
+stages:
+  - name: product_configuration_public_distribution_formats should return 200 GET
+    request:
+      url: "{grass_host}{product_configuration_public_distribution_formats}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: carveouts_territory should return 403 GET
+stages:
+  - name: carveouts_territory should return 403 GET
+    request:
+      url: "{grass_host}{carveouts_carveout}{accounting_carveouts_territory}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: carveouts_stores_grats should return 403 GET
+stages:
+  - name: carveouts_stores_grats should return 403 GET
+    request:
+      url: "{grass_host}{carveouts_stores_grats}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_vendor_product_code should return 403 GET
+stages:
+  - name: product_vendor_product_code should return 403 GET
+    request:
+      url: "{grass_host}{product_vendor}{accounting_product_vendor_product_code}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_public_localization should return 200 GET
+stages:
+  - name: product_public_localization should return 200 GET
+    request:
+      url: "{grass_host}{product_public_localization}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: product_digital_product_audio should return 403 GET
+stages:
+  - name: product_digital_product_audio should return 403 GET
+    request:
+      url: "{grass_host}{product_digital_product_audio}{accounting_digital_product_audio}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_digital_product_audio_validate should return 403 GET
+stages:
+  - name: product_digital_product_audio should return 403 GET
+    request:
+      url: "{grass_host}{product_digital_product_audio}{accounting_digital_product_audio_validate}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+        Content-Type: "application/json"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_digital_product_scheduling_and_pricing should return 403 GET
+stages:
+  - name: product_digital_product_scheduling_and_pricing should return 403 GET
+    request:
+      url: "{grass_host}{product_digital_product}{accounting_digital_product_scheduling_and_pricing}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+        Content-Type: "application/json"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_digital_product_tracks_grats should return 403 GET
+stages:
+  - name: product_digital_product_tracks_grats should return 403 GET
+    request:
+      url: "{grass_host}{product_digital_product}{accounting_digital_product_tracks_grats}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_digital_public_meta_lang should return 200 GET
+stages:
+  - name: product_digital_public_meta_lang should return 200 GET
+    request:
+      url: "{grass_host}{product_digital_public_meta_lang}{accounting_digital_product_audio}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+        Content-Type: "application/json"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: project_manager_project_manager_project should return 403 GET
+stages:
+  - name: project_manager_project should return 403 GET
+    request:
+      url: "{grass_host}{project_manager_project}{accounting_project_manager_project}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: project_manager_project_products should return 403 GET
+stages:
+  - name: project_manager_project_products should return 403 GET
+    request:
+      url: "{grass_host}{project_manager_project}{accounting_project_manager_project_products}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: project_manager_project_product_imprints should return 403 GET
+stages:
+  - name: project_manager_project_product_imprints should return 403 GET
+    request:
+      url: "{grass_host}{project_manager_project}{accounting_project_manager_project_product_imprints}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: project_manager_project_product_id should return 403 GET
+stages:
+  - name: project_manager_project_product_id should return 403 GET
+    request:
+      url: "{grass_host}{project_manager_project}{accounting_project_manager_project_product_id}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: project_manager_project_public_product_genres should return 200 GET
+stages:
+  - name: project_manager_project_public_product_genres should return 200 GET
+    request:
+      url: "{grass_host}{project_manager_project_public_product_genres}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: project_manager_project_public_product_genres_subgenres should return 200 GET
+stages:
+  - name: project_manager_project_public_product_genres_subgenres should return 200 GET
+    request:
+      url: "{grass_host}{project_manager_project_public_product_genres_subgenres}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: track_public_performer_roles should return 200 GET
+stages:
+  - name: track_public_performer_roles should return 200 GET
+    request:
+      url: "{grass_host}{track_public_performer_roles}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: track_product_tracks_validate_performers should return 403 GET
+stages:
+  - name: track_product_tracks_validate_performers should return 403 GET
+    request:
+      url: "{grass_host}{track_product}{accounting_tracks_validate_performers}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: track_product_tracks_publishing_obligation should return 403 GET
+stages:
+  - name: track_product_tracks_publishing_obligation should return 403 GET
+    request:
+      url: "{grass_host}{track_product}{accounting_tracks_publishing_obligation}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: track_product_tracks should return 403 GET
+stages:
+  - name: track_product_tracks should return 403 GET
+    request:
+      url: "{grass_host}{track_product}{accounting_track_product_tracks}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: track_track should return 403 GET
+stages:
+  - name: track_track should return 403 GET
+    request:
+      url: "{grass_host}{track_track}{accounting_track_track}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: track_track_performers should return 403 GET
+stages:
+  - name: track_track_performers should return 403 GET
+    request:
+      url: "{grass_host}{track_track}{accounting_track_track_performers}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: video_create_product should return 403 GET
+stages:
+  - name: video_create_product should return 403 GET
+    request:
+      url: "{grass_host}{video_create_product}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: video_product_approval should return 403 GET
+stages:
+  - name: video_product_approval should return 403 GET
+    request:
+      url: "{grass_host}{video_product}{accounting_video_product_approval}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: video_product_get_available_channels should return 403 GET
+stages:
+  - name: video_product_get_available_channels should return 403 GET
+    request:
+      url: "{grass_host}{video_product}{accounting_video_product_get_available_channels}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: video_metadata should return 403 GET
+stages:
+  - name: video_metadata should return 403 GET
+    request:
+      url: "{grass_host}{video_metadata}{accounting_video_product}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: video_stream_product_hls should return 403 GET
+stages:
+  - name: video_stream_product_hls should return 403 GET
+    request:
+      url: "{grass_host}{video_stream_product}{accounting_video_product_hls}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: video_jobs should return 403 GET
+stages:
+  - name: video_jobs should return 403 GET
+    request:
+      url: "{grass_host}{video_jobs}{accounting_job_parent_id}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: video_thumbnails_job should return 403 GET
+stages:
+  - name: video_thumbnails_job should return 403 GET
+    request:
+      url: "{grass_host}{video_thumbnails_job}{accounting_job_parent_id_image_size}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: accounting_revenue should return 200 GET
+stages:
+  - name: accounting_revenue should return 200 GET
+    request:
+      url: "{grass_host}{accounting_revenue}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: accountingrevenue should return 200 GET
+stages:
+  - name: accountingrevenue should return 200 GET
+    request:
+      url: "{grass_host}{accountingrevenue}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: accounting_attachments should return 200 GET
+stages:
+  - name: accounting_attachments should return 200 GET
+    request:
+      url: "{grass_host}{accounting_attachments}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: accounting_payments should return 200 GET
+stages:
+  - name: accounting_payments should return 200 GET
+    request:
+      url: "{grass_host}{accounting_payments}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: accounting_transaction_types should return 400 GET
+stages:
+  - name: accounting_transaction_types should return 400 GET
+    request:
+      url: "{grass_host}{accounting_transaction_types}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 400
+---
+
+test_name: accounting_report should return 400 GET
+stages:
+  - name: accounting_report should return 400 GET
+    request:
+      url: "{grass_host}{accounting_report}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 400
+---
+
+test_name: accounting_report_link should return 400 GET
+stages:
+  - name: accounting_report_link should return 400 GET
+    request:
+      url: "{grass_host}{accounting_report_link}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 400
+---
+
+test_name: accounting_reports should return 400 GET
+stages:
+  - name: accounting_reports should return 400 GET
+    request:
+      url: "{grass_host}{accounting_reports}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 400
+---
+
+test_name: analytics_top_tracks should return 403 GET
+stages:
+  - name: analytics_top_tracks should return 403 GET
+    request:
+      url: "{grass_host}{analytics_top_tracks}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_geographic_latest_date should return 403 GET
+stages:
+  - name: analytics_geographic_latest_date should return 403 GET
+    request:
+      url: "{grass_host}{analytics_geographic_latest_date}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_geographic_orchard_regions should return 403 GET
+stages:
+  - name: analytics_geographic_orchard_regions should return 403 GET
+    request:
+      url: "{grass_host}{analytics_geographic_orchard_regions}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_geographic_insights_by_territory should return 403 GET
+stages:
+  - name: analytics_geographic_insights_by_territory should return 403 GET
+    request:
+      url: "{grass_host}{analytics_geographic_insights_by_territory}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_geographic_insights_by_region should return 403 GET
+stages:
+  - name: analytics_geographic_insights_by_region should return 403 GET
+    request:
+      url: "{grass_host}{analytics_geographic_insights_by_region}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_geographic_demographic_insights should return 403 GET
+stages:
+  - name: analytics_geographic_demographic_insights should return 403 GET
+    request:
+      url: "{grass_host}{analytics_geographic_demographic_insights}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_stream_charts should return 403 GET
+stages:
+  - name: analytics_stream_charts should return 403 GET
+    request:
+      url: "{grass_host}{analytics_stream_charts}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_playlist_placements should return 403 GET
+stages:
+  - name: analytics_playlist_placements should return 403 GET
+    request:
+      url: "{grass_host}{analytics_playlist_placements}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_playlist_metadata should return 403 GET
+stages:
+  - name: analytics_playlist_metadata should return 403 GET
+    request:
+      url: "{grass_host}{analytics_playlist_metadata}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_countries should return 403 GET
+stages:
+  - name: analytics_countries should return 403 GET
+    request:
+      url: "{grass_host}{analytics_countries}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_genres should return 403 GET
+stages:
+  - name: analytics_genres should return 403 GET
+    request:
+      url: "{grass_host}{analytics_genres}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_imprints should return 403 GET
+stages:
+  - name: analytics_imprints should return 403 GET
+    request:
+      url: "{grass_host}{analytics_imprints}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_sources should return 403 GET
+stages:
+  - name: analytics_sources should return 403 GET
+    request:
+      url: "{grass_host}{analytics_sources}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_prefs should return 403 GET
+stages:
+  - name: analytics_prefs should return 403 GET
+    request:
+      url: "{grass_host}{analytics_prefs}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_overview should return 403 GET
+stages:
+  - name: analytics_overview should return 403 GET
+    request:
+      url: "{grass_host}{analytics_overview}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_analytics_user should return 403 GET
+stages:
+  - name: analytics_analytics_user should return 403 GET
+    request:
+      url: "{grass_host}{analytics_analytics_user}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_artistcustomevent should return 403 GET
+stages:
+  - name: analytics_artistcustomevent should return 403 GET
+    request:
+      url: "{grass_host}{analytics_artistcustomevent}{accounting_vendor}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_event should return 403 GET
+stages:
+  - name: analytics_event should return 403 GET
+    request:
+      url: "{grass_host}{analytics_event}{accounting_vendor}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_transactiongroups should return 403 GET
+stages:
+  - name: analytics_transactiongroups should return 403 GET
+    request:
+      url: "{grass_host}{analytics_transactiongroups}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_getindexdata should return 403 GET
+stages:
+  - name: analytics_getindexdata should return 403 GET
+    request:
+      url: "{grass_host}{analytics_getindexdata}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: users_session_alw should return 200 GET
+stages:
+  - name: users_session_alw should return 200 GET
+    request:
+      url: "{grass_host}{users_session_alw}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 200
+---
+
+test_name: reporting_presets should return 403 GET
+stages:
+  - name: reporting_presets should return 403 GET
+    request:
+      url: "{grass_host}{reporting_presets}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: reporting_preset should return 403 POST
+stages:
+  - name: reporting_preset should return 403 POST
+    request:
+      url: "{grass_host}{reporting_preset}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: POST
+      json: !include constants/reportingpreset.json
+    response:
+      status_code: 403
+---
+
+test_name: reporting_filters should return 403 GET
+stages:
+  - name: reporting_filters should return 403 GET
+    request:
+      url: "{grass_host}{reporting_filters}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+#admin only, not allowed
+test_name: blacklist_manager_hello should return 403 GET
+stages:
+  - name: blacklist_manager_hello should return 403 GET
+    request:
+      url: "{grass_host}{blacklist_manager_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: account_hello should return 403 GET
+stages:
+  - name: account_hello should return 403 GET
+    request:
+      url: "{grass_host}{account_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: accounting_hello should return 403 GET
+stages:
+  - name: accounting_hello should return 403 GET
+    request:
+      url: "{grass_host}{accounting_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: analytics_hello should return 403 GET
+stages:
+  - name: analytics_hello should return 403 GET
+    request:
+      url: "{grass_host}{analytics_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: artist_hello should return 403 GET
+stages:
+  - name: artist_hello should return 403 GET
+    request:
+      url: "{grass_host}{artist_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: assets_hello should return 403 GET
+stages:
+  - name: assets_hello should return 403 GET
+    request:
+      url: "{grass_host}{assets_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: carveouts_hello should return 403 GET
+stages:
+  - name: carveouts_hello should return 403 GET
+    request:
+      url: "{grass_host}{carveouts_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: conflict_manager_hello should return 403 GET
+stages:
+  - name: conflict_manager_hello should return 403 GET
+    request:
+      url: "{grass_host}{conflict_manager_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: contracts_hello should return 403 GET
+stages:
+  - name: contracts_hello should return 403 GET
+    request:
+      url: "{grass_host}{contracts_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: features_hello should return 403 GET
+stages:
+  - name: features_hello should return 403 GET
+    request:
+      url: "{grass_host}{features_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: notifications_hello should return 403 GET
+stages:
+  - name: notifications_hello should return 403 GET
+    request:
+      url: "{grass_host}{notifications_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: pricing_hello should return 403 GET
+stages:
+  - name: pricing_hello should return 403 GET
+    request:
+      url: "{grass_host}{pricing_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_configuration_hello should return 403 GET
+stages:
+  - name: product_configuration_hello should return 403 GET
+    request:
+      url: "{grass_host}{product_configuration_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_digital_hello should return 403 GET
+stages:
+  - name: product_digital_hello should return 403 GET
+    request:
+      url: "{grass_host}{product_digital_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_physical_hello should return 403 GET
+stages:
+  - name: product_physical_hello should return 403 GET
+    request:
+      url: "{grass_host}{product_physical_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: product_hello should return 403 GET
+stages:
+  - name: product_hello should return 403 GET
+    request:
+      url: "{grass_host}{product_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: project_manager_hello should return 403 GET
+stages:
+  - name: project_manager_hello should return 403 GET
+    request:
+      url: "{grass_host}{project_manager_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: promo_player_hello should return 403 GET
+stages:
+  - name: promo_player_hello should return 403 GET
+    request:
+      url: "{grass_host}{promo_player_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: reporting_hello should return 403 GET
+stages:
+  - name: reporting_hello should return 403 GET
+    request:
+      url: "{grass_host}{reporting_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: sales_goals_hello should return 403 GET
+stages:
+  - name: sales_goals_hello should return 403 GET
+    request:
+      url: "{grass_host}{sales_goals_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: search_hello should return 403 GET
+stages:
+  - name: search_hello should return 403 GET
+    request:
+      url: "{grass_host}{search_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: territories_hello should return 308 GET
+stages:
+  - name: territories_hello should return 308 GET
+    request:
+      url: "{grass_host}{territories_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 308
+---
+
+test_name: track_hello should return 403 GET
+stages:
+  - name: track_hello should return 403 GET
+    request:
+      url: "{grass_host}{track_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: users_hello should return 403 GET
+stages:
+  - name: users_hello should return 403 GET
+    request:
+      url: "{grass_host}{users_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---
+
+test_name: video_hello should return 403 GET
+stages:
+  - name: video_hello should return 403 GET
+    request:
+      url: "{grass_host}{video_hello}"
+      headers: 
+        session: "{workstation_accounting_session_token}"
+      method: GET
+    response:
+      status_code: 403
+---

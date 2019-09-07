@@ -1,0 +1,8 @@
+---
+
+name: ows-grass
+description: ows-grass for testing endpoints
+
+variables:
+  grass_host: https://qa-ows-grass.theorchard.io
+  grass_api_host: https://qa-ows-grass.theorchard.io/api

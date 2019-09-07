@@ -1,0 +1,9 @@
+
+name: ows-contracts
+description: ows-contracts for testing endpoints
+
+variables:
+  contracts_manager_host: https://qa-ows-contracts.theorchard.io
+  contracts_mechadmin_for_account: "/contracts/mechadmin_for_account"
+  contracts_mechadmin: "/contracts/mechadmin"
+  contracts_hello: "/contracts/hello/"

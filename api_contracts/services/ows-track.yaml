@@ -1,0 +1,12 @@
+---
+
+name: ows-track
+description: ows-track for testing endpoints
+
+variables:
+  track-host: https://qa-ows-track.theorchard.io
+  track_public_performer_roles: "/track/public/performer/roles"
+  track_product: "/track/product/"
+  track_track: "/track/track/"
+  track_hello: "/track/hello"
+ 

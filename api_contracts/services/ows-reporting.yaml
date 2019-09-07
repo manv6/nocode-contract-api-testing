@@ -1,0 +1,14 @@
+---
+
+name: ows-reporting
+description: ows-reporting for testing endpoints
+
+variables:
+  ows-reporting-host: https://qa-ows-reporting.theorchard.io
+  reporting_presets: "/reporting/report/presets"
+  reporting_filters: "/reporting/report/workstation-physical-product-view-US/filters"
+  reporting_embed: "/reporting/report/workstation-physical-product-view-US/embed"
+  reporting_report: "/reporting/report/workstation-physical-product-view-US"
+  reporting_preset: "/reporting/report/preset"
+  reporting_overview: "/reporting/product/workstation-physical-product-view-US/overview/workstation-physical-product-view-US"
+  reporting_hello: "/reporting/hello"

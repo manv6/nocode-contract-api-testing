@@ -1,0 +1,12 @@
+
+name: ows-pricing
+description: ows-pricing for testing endpoints
+
+variables:
+  pricing_host: https://qa-ows-pricing.theorchard.io
+  pricing_pricing_family: "/pricing/pricing-family"
+  pricing_public_pricing_family: "/pricing/public/pricing-family"
+  pricing_legacy_product: "/pricing/legacy/music/product"
+  pricing_product: "/pricing/product"
+  pricing_vendor: "/pricing/vendor/"
+  pricing_hello: "/pricing/hello"

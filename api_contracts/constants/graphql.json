@@ -1,0 +1,7 @@
+{
+   "operationName": null,
+   "variables": {  
+      "endDate": "2019-06-13"
+   },
+   "query": "query ($endDate: Date) {{ allProductsSearch ( limit: 10, offset: 0, sortField: \"release_date\", sortDir: desc, endDate: $endDate ) {{ totalCount   products {{ primaryArtists {{ artistName   artistType  __typename }} configuration format imageLocation(size: \"cover\") productId productName productTypeId productConfiguration project {{  projectId projectName __typename }} releaseDate subaccountName typeOfVideo __typename }} __typename }} }}"
+}

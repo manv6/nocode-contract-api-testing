@@ -1,0 +1,9 @@
+---
+
+name: ows-promo-player
+description: ows-promo-player for testing endpoints
+
+variables:
+  promo_player_host: https://qa-ows-promo-player.theorchard.io
+  promo_player_product: "/promo-player/product/"
+  promo_player_hello: "/promo-player/hello"

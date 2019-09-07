@@ -1,0 +1,8 @@
+
+name: ows-product-configuration
+description: ows-product-configuration for testing endpoints
+
+variables:
+  product_configuration_host: https://qa-ows-product-configuration.theorchard.io
+  product_configuration_public_distribution_formats: "/product-configuration/public/distribution-formats"
+  product_configuration_hello: "/product-configuration/hello"

@@ -1,0 +1,35 @@
+---
+
+name: ows-analytics
+description: ows-analytics for testing endpoints
+
+variables:
+  analytics_host: https://qa-ows-analytics.theorchard.io
+  analytics_analytics: "/analytics"
+  analytics_top_tracks: "/analytics/top-tracks?limit=10"
+  analytics_geographic_latest_date: "/analytics/geographics-latest-date"
+  analytics_geographic_orchard_regions: "/analytics/geographic-orchard-regions"
+  analytics_geographic_insights_by_territory: "/analytics/geographic-insights-by-territory"
+  analytics_geographic_insights_by_region: "/analytics/geographic-insights-by-region"
+  analytics_geographic_demographic_insights: "/analytics/demographic_insights"
+  analytics_stream_charts: "/analytics/stream-charts"
+  analytics_playlist_placements: "/analytics/playlist-placements"
+  analytics_playlist_metadata: "/analytics/playlist-metadata"
+  analytics_countries: "/analytics/countries"
+  analytics_genres: "/analytics/genres"
+  analytics_imprints: "/analytics/imprints"
+  analytics_sources: "/analytics/sources"
+  analytics_prefs: "/analytics/prefs"
+  analytics_overview: "/analytics/overview"
+  analytics_analytics_user: "/analytics/user"
+  analytics_artistcustomevent: "/analytics/artistcustomevent?from_date=2019-05-20&to_date=2019-06-19&vendor_id="
+  analytics_event: "/analytics/event?from_date=2019-05-20&to_date=2019-06-19&vendor_id="
+  analytics_transactiongroups: "/analytics/transactiongroups?group_by=channel&to_date=2019-06-19&from_date=2019-05-20&paid_vs_free_ids=0"
+  analytics_getindexdata: "/analytics/getindexdata?transaction_type_ids=1&group_by=isrc&limit=20&from_date=2019-05-20&to_date=2019-06-19"
+  analytics_catalogs: "/analytics/catalogs?search_value=TEst&search_by=catalog_ids&size=100&start=0"
+  analytics_catalog: "/analytics/catalog/?field=catalog_id&search_value=2212962&size=1&start=0"
+  analytics_artists: "/analytics/artists?search_value=mil&compound_query=(not%20artist_name:%27Various%20Artists%27)&search_by=artist_ids&size=100&start=0"
+  analytics_geostats: "/analytics/geostats?id=2190269&entity_type=release&transaction_type_ids=19&from_date=2019-05-01&to_date=2019-06-01"
+  analytics_stats: "/analytics/stats?from_date=2019-04-30&to_date=2019-05-29&breakdown_by=imprint&group_by=channel&paid_vs_free_ids=0&transaction_type_ids=37&object_ids="
+  analytics_channeldetail: "/analytics/channeldetail?from_date=2019-04-30&to_date=2019-05-29&breakdown_by=imprint&group_by=channel&paid_vs_free_ids=0&transaction_type_ids=37&object_ids="
+  analytics_hello: "/analytics/hello"

@@ -1,0 +1,25 @@
+---
+
+name: ows-video
+description: ows-video for testing endpoints
+
+variables:
+  video_host: https://qa-ows-video.theorchard.io
+  video_jobs: "/video/jobs?job_parent_id="
+  video_create_product: "/video/create_product"
+  video_product: "/video/product/"
+  video_metadata: "/video/metadata/"
+  video_stream_product: "/video/stream/product/"
+  video_thumbnails_job: "/video/thumbnails/job/"
+
+
+  video_metadata_track: "/video/metadata/<int>/track"
+  video_workflow_ingest_from_browser: "/video/workflow/workflow_ingest_from_browser"
+  video_product_get_available_channels: "/video/product/<int>/get_available_channels"
+  video_product_approval: "/video/product/<int>/approval"
+  video_product_submit: "/video/product/<int>/submit"
+
+  
+  video_new_assets: "/video/new_assets/<int:dashboard_item_id>"
+  video_max_dashboard_item: "/video/max_dashboard_item_id"
+  video_hello: "/video/hello/"

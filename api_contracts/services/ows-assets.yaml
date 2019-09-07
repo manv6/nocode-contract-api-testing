@@ -1,0 +1,19 @@
+---
+
+name: ows-assets
+description: ows-assets for testing endpoints
+
+variables:
+  assets_host: https://qa-ows-assets.theorchard.io
+  assets_image_vendor: "/assets/image/vendor/"
+  assets_image_product_cover: "/assets/image/product/cover/"
+  assets_image_product_large_cover: "/assets/image/product/large_cover/"
+  assets_image_product_cover_large: "/assets/image/product/cover_large/"
+  assets_asset_product: "/assets/asset/product/"
+  assets_upload_token: "/assets/upload-token"
+  assets_asset: "/assets/asset"
+  assets_v2_asset_status: "/assets/v2/asset/status/"
+  assets_asset_status: "/assets/asset/status"
+  assets_stream_track_hls: "/assets/stream/track/"
+  assets_stream_track_hls_clear_cache: "/assets/stream/track/clear-cache"
+  assets_hello: "/assets/hello"

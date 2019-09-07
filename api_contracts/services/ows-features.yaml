@@ -1,0 +1,10 @@
+---
+
+name: ows-features
+description: ows-features for testing endpoints
+
+variables:
+  features_host: https://qa-ows-features.theorchard.io
+  features_features: "/features/features"
+  features_user: "/features/features/user/"
+  features_hello: "/features/hello"

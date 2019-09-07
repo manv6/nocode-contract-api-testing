@@ -1,0 +1,11 @@
+---
+
+name: ows-users
+description: ows-users for testing endpoints
+
+variables:
+  users_host: https://qa-ows-users.theorchard.io
+  users_session_alw: "/users/users/session/alw"
+  users_ws_aggrements: "/users/ws/agreements/vendor/1"
+  users_ws: "/users/ws/"
+  users_hello: "/users/hello/"

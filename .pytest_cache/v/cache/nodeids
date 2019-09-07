@@ -1,0 +1,3 @@
+[
+  "api_contracts/test_accounting.tavern.yaml::features_features should return 200 GET"
+]

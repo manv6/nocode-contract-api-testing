@@ -1,0 +1,9 @@
+
+name: ows-product
+description: ows-product for testing endpoints
+
+variables:
+  product_host: https://qa-ows-product.theorchard.io
+  product_vendor: "/product/vendor/"
+  product_public_localization: "/product/public/localization/languages?legacy=1"
+  product_hello: "/product/hello"

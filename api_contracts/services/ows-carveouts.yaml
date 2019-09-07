@@ -1,0 +1,9 @@
+
+name: ows-carveouts
+description: ows-carveouts for testing endpoints
+
+variables:
+  carveouts_host: https://qa-ows-carveouts.theorchard.io
+  carveouts_carveout: "/carveouts/carveout/"
+  carveouts_stores_grats: "/carveouts/stores/grats"
+  carveouts_hello: "/carveouts/hello"

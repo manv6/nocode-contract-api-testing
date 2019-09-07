@@ -1,0 +1,9 @@
+
+name: ows-notifications
+description: ows-notifications for testing endpoints
+
+variables:
+  notifications_host: https://qa-ows-notifications.theorchard.io
+  notifications_subscribe: "/notifications/subscribe"
+  notifications_unsubscribe: "/notifications/unsubscribe"
+  notifications_hello: "/notifications/hello"

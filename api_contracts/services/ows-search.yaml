@@ -1,0 +1,11 @@
+---
+
+name: ows-search
+description: ows-search for testing endpoints
+
+variables:
+  search_host: https://qa-ows-search.theorchard.io
+  search_catalog_suggest: "/search/api/v1/catalogsuggest"
+  search_suggest: "/search/api/v1/suggest"
+  search: "/users/ws/"
+  search_hello: "/users/hello/"

@@ -1,0 +1,18 @@
+---
+
+name: ows-account
+description: ows-account for testing endpoints
+
+variables:
+  account_host: https://qa-ows-account.theorchard.io
+  account_distributor: "/account/distributor"
+  account_identity: "/account/identity"
+  account_profile_save: "/account/myprofilesave"
+  account_save_workstation_view: "/account/saveworkstationview?workstationview=Film"
+  account_save_email_notification: "/account/saveemailnotificationsettings"
+  account_save_general_settings: "/account/savegeneralsettings"
+  account_change_auth0_password: "/account/changeauth0password"
+  account_check_login: "/account/checklogin/"
+  account_save_label_contact: "/account/savelabelcontact/"
+  account_subaccount: "/account/subaccount/"
+  account_hello: "/account/hello"

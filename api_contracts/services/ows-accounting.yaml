@@ -1,0 +1,20 @@
+---
+
+name: ows-accounting
+description: ows-accounting for testing endpoints
+
+variables:
+  accounting_host: https://qa-ows-accounting.theorchard.io
+  accounting_revenue: "/accounting/revenue?recent=125"
+  accountingrevenue: "/accountingrevenue?recent=125"
+  accounting_attachments: "/accounting/attachments?periods=214,215,216"
+  accounting_attachment: "/accounting/attachments?periods=214,215,216"
+  accounting_physical_reserves: "/accounting/get-physical-reserves"
+  accounting_payments: "/accounting/payments?recent=125"
+  accounting_transaction_types: "/accounting/transaction_types?periods=214,215,216"
+  accounting_report_link: "/accounting/report-link?file_type=pdf&periods=214,215,216&number_format=en_EN&transaction_types=physical"
+  accounting_report: "/accounting/report?file_type=pdf&periods=214,215,216&number_format=en_EN&transaction_types=physical"
+  accounting_reports: /accounting/reports?file_type=pdf&periods=214,215,216"
+  accounting_holds: "/accounting/holds?file_type=pdf&periods=214,215,216"
+  accounting_period: "/accounting/accounting_period"
+  accounting_hello: "/accounting/hello"

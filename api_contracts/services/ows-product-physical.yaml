@@ -1,0 +1,9 @@
+
+name: ows-product-physical
+description: ows-product-physical for testing endpoints
+
+variables:
+  product_physical_host: https://qa-ows-product-physical.theorchard.io
+  product_physical_packaging: "/product-physical/packaging"
+  product_physical_product: "/product-physical/product/"
+  product_physical_hello: "/product-physical/hello"

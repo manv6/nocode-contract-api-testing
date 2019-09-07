@@ -1,0 +1,13 @@
+---
+
+name: ows-artist
+description: ows-artist for testing endpoints
+
+variables:
+  artist_host: https://qa-ows-artists.theorchard.io
+  artist_artists: "/artist/artists?page_limit=99999&artist_type=artist"
+  artist_artist: "/artist/artist"
+  artist_searchartistautocomplete: "/artist/searchartistautocomplete?q=gin&limit=150&timestamp=1559306434287"
+  artist_subaccount_artists: "/artist/subaccount/32365/artists?page_limit=99999"
+  artist_vendor_artists: "/artist/vendor/123/artists"
+  artist_hello: "/artist/hello"

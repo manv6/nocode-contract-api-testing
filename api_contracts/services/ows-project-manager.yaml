@@ -1,0 +1,13 @@
+---
+
+name: ows-project-manager
+description: ows-project-manager for testing endpoints
+
+variables:
+  project_manager_host: https://qa-ows-project-manager.theorchard.io
+  project_manager_projects: "/project-manager/projects?page_offset=0&page_limit=15"
+  project-manager: "/project-manager/product/types"
+  project_manager_project: "/project-manager/project"
+  project_manager_project_public_product_genres: "/project-manager/public/product/genres"
+  project_manager_project_public_product_genres_subgenres: "/project-manager/public/product/genres/7/subgenres"
+  project_manager_hello: "/project-manager/hello"

@@ -1,0 +1,10 @@
+
+name: ows-product-digital
+description: ows-product-digital for testing endpoints
+
+variables:
+  product_digital_host: https://qa-ows-product-digital.theorchard.io
+  product_digital_product: "/product-digital/product/"
+  product_digital_product_audio: "/product-digital/product/audio/"
+  product_digital_public_meta_lang: "/product-digital/public/meta-language?productId="
+  product_digital_hello: "/product-digital/hello"

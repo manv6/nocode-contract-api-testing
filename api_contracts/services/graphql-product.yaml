@@ -1,0 +1,9 @@
+---
+
+name: graphql-product
+description: graphql-product for testing endpoints
+
+variables:
+  graphql_product_host: https://qa-graphql-product.theorchard.io
+  graphql_product_graphql: "/graphql-product/graphql"
+  graphql-product_admin_only: "/graphql-product/*"

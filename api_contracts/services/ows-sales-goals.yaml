@@ -1,0 +1,12 @@
+---
+
+name: ows-sales-goals
+description: ows-sales-goals for testing endpoints
+
+variables:
+  sales_goals_host: https://qa-ows-sales-goals.theorchard.io
+  sales_goals_countries: "/salesgoals/goals/countries"
+  sales_goals_int: "/salesgoals/goals/"
+  sales_goals_marketing_highlights: "/salesgoals/marketing_highlights/"
+  sales_goals_territories: "/salesgoals/territories"
+  sales_goals_hello: "/salesgoals/hello"

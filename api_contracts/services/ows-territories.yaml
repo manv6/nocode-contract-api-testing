@@ -1,0 +1,9 @@
+---
+
+name: ows-territories
+description: ows-territories for testing endpoints
+
+variables:
+  territories_host: https://qa-ows-territories.theorchard.io
+  territories_territory: "/territories/territory/Orch_1_2016"
+  territories_hello: "/territories/hello"

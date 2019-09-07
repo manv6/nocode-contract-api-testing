@@ -1,0 +1,37 @@
+# Add any tasks that are not dependent on files to the .PHONY list.
+.PHONY: dev pip_dev lint test test_unit
+
+dev:
+	python3.6 dev.py
+
+pip_dev: requirements.txt requirements-dev.txt
+	pip install --upgrade pip
+	pip install -r requirements.txt
+	pip install -r requirements-dev.txt
+
+lint: grass/ tests/
+	flake8 grass/ tests/
+
+test: tests/
+	py.test tests/
+
+test_api: api_contracts/
+	py.test api_contracts/ -s -vv \
+	--tavern-beta-new-traceback \
+	--tavern-global-cfg tests/api_contracts/services/*.yaml \
+	tests/api_contracts/constants/*.yaml
+
+html_coverage: tests/
+	rm -rf htmlcov
+	py.test -v tests/ \
+		--ignore=tests/api_contracts/ \
+		--cov-config .coveragerc \
+		--cov ./ \
+		--cov-report html
+
+test_unit:
+	py.test \
+		--ignore=tests/api_contracts/ \
+		--cov grass tests/ \
+		--cov-report xml \
+		--junitxml=pyunit.xml
