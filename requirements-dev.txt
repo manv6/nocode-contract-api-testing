@@ -1,7 +1,7 @@
 -i https://pypi.theorchard.io/pypi/
 
 ipdb==0.12
-ipython==7.4.0
+ipython==7.16.3
 pycodestyle==2.5.0
 pydocstyle==3.0.0
 pytest-cov==2.6.1
